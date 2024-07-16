@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <link rel = "stylesheet" type = "text/css" href = '{% static "css/style.css" %}'>
+<head>
+    <title>SecurityLens - CVE Finder</title>
+</head>
+<body>
+    <h1 class="title">SecurityLens - CVE Finder</h1>
+    
+    <h2>Happy Searching!</h2>
+
+     <hr>
+     <form action = "">
+        <input type="text" placeholder="Search CVE's" class="search-box" />
+        <input type="button" value="Search" onclick="disp()" />
+     </form>
+
+     <img src = "{% static 'images/cve.jpg' %}" alt="CVE" class="center-image" />
+
+    <script src="{% static 'js/all.js' %} "></script>
+</body>
+</html>

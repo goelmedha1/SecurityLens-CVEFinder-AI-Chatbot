@@ -1,0 +1,38 @@
+/* styles.css */
+
+body {
+    background-color: purple;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.search-box {
+    padding: 10px;
+    font-size: 16px;
+    width: 500px;
+    border-color: black;
+    border-width: 5px;
+}
+
+.center-image { 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 1400px;
+    height: 500px;
+}
+
+
+.title {
+    background: white;
+    width: 100%;
+    max-width: 500px;
+    
+}

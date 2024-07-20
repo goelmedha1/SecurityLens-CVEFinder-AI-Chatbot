@@ -1,3 +1,3 @@
 function disp(){
-    alert("I am Javascript");
+    alert("Please enter text to search");
 }

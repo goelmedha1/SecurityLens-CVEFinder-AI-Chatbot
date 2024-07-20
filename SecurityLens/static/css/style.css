@@ -19,6 +19,10 @@ body {
     border-width: 5px;
 }
 
+.search-box table {
+    width: 100%;
+}
+
 .center-image { 
     display: block;
     margin-left: auto;

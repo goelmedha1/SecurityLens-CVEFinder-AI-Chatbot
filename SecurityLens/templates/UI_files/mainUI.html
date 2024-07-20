@@ -11,13 +11,19 @@
     <h2>Happy Searching!</h2>
 
      <hr>
-     <form action = "">
-        <input type="text" placeholder="Search CVE's" class="search-box" />
-        <input type="button" value="Search" onclick="disp()" />
+     <form action = "", method="get">
+        
+            {{ forms }}
+
+        <input type="submit", value="submit">
+        <!-- <input type="text" placeholder="Search CVE's" class="search-box" />
+        <input type="button" value="Search" onclick="disp()" /> -->
      </form>
 
-     <img src = "{% static 'images/cve.jpg' %}" alt="CVE" class="center-image" />
+
+     <img src = "{% static 'images/cve.jpg' %}" alt="CVE" class="center-image" /> 
 
     <script src="{% static 'js/all.js' %} "></script>
 </body>
+
 </html>

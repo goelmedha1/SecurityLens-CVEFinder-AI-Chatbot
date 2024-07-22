@@ -14,26 +14,22 @@ def index(request):
     return HttpResponse('Home Page')
 
 def userInterface(request):
-    # if request.method == "GET" and "q" in request.GET:
-    #     query = request.GET["q"]
-    #     results = call_openai_api(query)
-    #     return JsonResponse({'results': results})
-    fm = UI_form()
-    return render(request, 'UI_files/mainUI.html', {'forms':fm})
+
+    if request.method == 'POST':
+        fm = UI_form(request.POST)
+        if fm.is_valid():
+            
+            query =  fm.cleaned_data['search_box']
+            db_data = SearchQuery(id = None, search_box=query)
+            db_data.save()
+
+    else:
+        fm = UI_form()
+    return render(request, 'UI_files/mainUI.html', {'forms':fm})  
+
     #return render(request, 'UI_files/mainUI.html')
 
-# def call_openai_api(query):
-#     response = openai.Completion.create(
-#         engine="text-davinci-003",
-#         prompt=query,
-#         max_tokens=100
-#     )
 
-#     return response.choices[0].text.strip()
-
-def QuerySearch(request):
-    sq = SearchQuery.objects.all()
-    return(request, 'UI_files/mainUI.html', {'squery': sq})
 
 
 # def showformdata(request):

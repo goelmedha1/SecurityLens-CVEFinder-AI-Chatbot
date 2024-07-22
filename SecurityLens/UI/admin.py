@@ -5,6 +5,6 @@ from .models import SearchQuery
 
 @admin.register(SearchQuery)
 class SearchAdmin(admin.ModelAdmin):
-    list_display = ('id','query', 'result', 'timestamp')
+    list_display = ('id','search_box')
 
 # admin.site.register(SearchQuery, SearchAdmin)

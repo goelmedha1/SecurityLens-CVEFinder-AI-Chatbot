@@ -9,21 +9,22 @@
     <h1 class="title">SecurityLens - CVE Finder</h1>
     
     <h2>Happy Searching!</h2>
-
+    <!-- Creating a form -->
      <hr>
-     <form action = "", method="get">
-        
+     <form action = "", method="POST"> {% csrf_token %}
+
             {{ forms }}
 
         <input type="submit", value="submit">
-        <!-- <input type="text" placeholder="Search CVE's" class="search-box" />
-        <input type="button" value="Search" onclick="disp()" /> -->
+
+        <!--<input type="button" value="Search" onclick="disp()" /> -->
      </form>
 
-
+     <!-- Add image from static folder -->
      <img src = "{% static 'images/cve.jpg' %}" alt="CVE" class="center-image" /> 
 
-    <script src="{% static 'js/all.js' %} "></script>
+
+    <!-- <script src="{% static 'js/all.js' %} "></script> -->
 </body>
 
 </html>

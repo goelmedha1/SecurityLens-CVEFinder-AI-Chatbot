@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Default value{% endblock %}</title>
+    <link rel="icon" type="image/x-icon" href="{% static 'images/logo_simple.png' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    
+    <header>
+        <nav>
+            <div id="logo1">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'images/logo_simple.png' %}" alt="Logo" height="150">    
+                </a>           
+            </div>
+            <div id="logo2">
+                <a href="{% url 'home' %}">
+                    <img src="{% static 'images/text-removebg-preview.png' %}" alt="Logo" height="200">
+                </a> 
+            </div>
+            <ul>
+                <li><a href="{% url 'home' %}">Home</a></li>
+                <li><a href="{% url 'cve_chatbot' %}">CVE Finder Chatbot</a></li>
+            </ul>
+        </nav>
+    </header>
+    {% block content %}{% endblock %}
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+</body>
+</html>

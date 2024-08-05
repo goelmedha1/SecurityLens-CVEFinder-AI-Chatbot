@@ -1,0 +1,27 @@
+<!-- CVE_Finder/templates/CVE_Finder/cve_chatbot.html -->
+{% extends "layout.html" %}
+{% load static %}
+{% block title %}Chatbot{% endblock %}
+{% block content %}
+
+<h1>CVE Finder Chatbot</h1>
+<div id="chatbot-container">
+    <div id="chatbox">
+        <div id="messages"></div>
+        <input type="text" id="user-input" placeholder="Type your message here...">
+        <button id="send-btn">Send</button>
+    </div>
+</div>
+<link rel="stylesheet" href="{% static 'CVE_Finder/css/chatbot.css' %}">
+<script src="{% static 'CVE_Finder/js/chatbot.js' %}"></script>
+<style>
+    body {
+        background-image: url("{% static 'images/background1.png' %}");
+        background-color: #0f256d;
+        color: #e5e4ed;
+        background-size: 600;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+</style>
+{% endblock %}

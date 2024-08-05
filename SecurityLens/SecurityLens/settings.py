@@ -12,9 +12,10 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+from dotenv import load_dotenv
 
 # Add this line to include your OpenAI API key
-OPENAI_API_KEY = os.getenv('openai_api_key')
+#OPENAI_API_KEY = os.getenv('openai_api_key')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -44,7 +45,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'UI',
+    'CVE_Finder',
+    
 ]
 
 MIDDLEWARE = [
@@ -131,3 +133,9 @@ STATICFILES_DIRS = [STATIC_DIR]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Load environment variables from .env files
+load_dotenv()
+
+# Retrieve the OpenAI API key from environment variables
+OPENAI_API_KEY = os.getenv('sk-VNCysI5i6EZiqdKkuqozBZ4jjPKo-58LXAZOTZoxJfT3BlbkFJxMaN2JFamcJlrmTW31sKPtQ4gZRpZiu6nqJ2LLnkAA')

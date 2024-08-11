@@ -19,7 +19,7 @@ header {
 #logo1, #logo2 {
     display: flex;
     align-items: center;
-    width: 70px; /* Set width for logo container */
+    width: 50px; /* Set width for logo container */
     padding: 10px 10px;
 }
 #logo1 img {
@@ -69,13 +69,13 @@ nav ul li a:hover {
 
 /* Add any necessary styles for the slider */
 .slider {
-    width: 80%;
+    width: 100%;
     margin: 0 auto;
     position: relative;
 }
 
 .slider img {
-    width: 100%;
+    width: 200%;
     height: auto;
 }
 

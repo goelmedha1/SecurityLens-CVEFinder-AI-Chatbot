@@ -4,17 +4,24 @@
 # from .cve_utils import search_cve_database
 # from .cve_utils import search_cve_by_product
 
-# # Initialize the OpenAI client with your API key
+# # # Initialize the OpenAI client with your API key
 # client = OpenAI(api_key=settings.OPENAI_API_KEY)
 
 
 # def get_chatgpt_response(prompt):
 #     try:
-#         #Fetch CVE data based on user prompt
-#         if 'Windows' in prompt or 'Linux' in prompt or 'MacOS' in prompt:
-#             cve_info = search_cve_by_product(prompt)
-#         else:
+
+#         if prompt.startswith("CVE-"):
+#             # Treat it as a CVE ID and use search_cve_database
 #             cve_info = search_cve_database(prompt)
+#         else:
+#             # Treat it as a keyword search and use search_cve_by_product
+#             cve_info = search_cve_by_product(prompt)
+#         #Fetch CVE data based on user prompt
+#         # if 'Windows' in prompt or 'Linux' in prompt or 'MacOS' in prompt:
+#         #     cve_info = search_cve_by_product(prompt)
+#         # else:
+#         #     cve_info = search_cve_database(prompt)
 #         #with_raw_response
 #         # Create a chat completion with the given prompt
 #         response = client.chat.completions.with_raw_response.create(
@@ -27,10 +34,10 @@
             
 #         )
 
-#         # Parse the response to extract the completion data
+# #         # Parse the response to extract the completion data
 #         completion = response.parse()
         
-#         # Extract the message content from the response
+# #         # Extract the message content from the response
 #         return completion.choices[0].message.content.strip()
 #     except Exception as e:
 #         return f"Error: {e}"

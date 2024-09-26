@@ -74,7 +74,7 @@
 #print(search_cve_by_product("netbios"))
 # print(search_cve_database("CVE-2020-2020"))
 
-
+#cve_utils.py
 
 import requests
 from langchain.tools import BaseTool
@@ -86,7 +86,7 @@ class FetchCVEData(BaseTool):
     def _run(self, query: str):
         # Initialize parameters
         params = {
-            'resultsPerPage': 10,  # Limit to 10 results per request
+            'resultsPerPage': 10,  # Limit to 100 results per request
             'startIndex': 0,       # Start from the first result
         }
         if "CVE-" in query:
@@ -96,6 +96,15 @@ class FetchCVEData(BaseTool):
             # Otherwise, treat it as a keyword search
             url = f"https://services.nvd.nist.gov/rest/json/cves/2.0?keywordSearch={query}"
         
+        # url = f"https://services.nvd.nist.gov/rest/json/cves/2.0"  # Main URL for fetching data
+        # if "CVE-" in query:
+        #     # If the query contains a CVE ID, search by ID
+        #     params['cveId'] = query
+        # else:
+        #     # Otherwise, treat it as a keyword search
+        #     params['keywordSearch'] = query
+
+
         response = requests.get(url,params=params)
         data = response.json()
         

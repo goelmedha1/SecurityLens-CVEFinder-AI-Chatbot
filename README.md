@@ -1,5 +1,7 @@
 # SecurityLens-CVEFinder
 
+![AI-powered Chatbot](/Users/medhagoel/Downloads/Django_folder/SecurityLens-CVEFinder/SecurityLens/static/images/AI_1.jpeg "SecurityLens Chatbot")
+
 SecurityLens is an AI-powered chatbot integrated into a Django-based web application designed to efficiently retrieve and display information about Common Vulnerabilities and Exposures (CVEs). Developed with the help of OpenAI's API and LangChain, SecurityLens provides users with detailed insights into vulnerabilities associated with various systems and software.
 
 ## Features
@@ -10,6 +12,8 @@ SecurityLens is an AI-powered chatbot integrated into a Django-based web applica
 4. Flexible Query Handling: Capable of interpreting both specific CVE IDs (e.g., Give me details about CVE-2020-2020) and broader keyword searches (e.g., "Give me CVEs related to Windows").
 
 ## Tech Stack
+
+![Tech Stack](/Users/medhagoel/Downloads/Django_folder/SecurityLens-CVEFinder/SecurityLens/static/images/AI_2.jpeg "Django, Python, Docker, AWS")
 
 1. Backend: Django, Python
 2. Frontend: HTML, CSS, JavaScript

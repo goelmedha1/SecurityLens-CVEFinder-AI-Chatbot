@@ -1,0 +1,90 @@
+body {
+    background: #0f256d;
+    color: #f2f1f8;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2em;
+}
+
+header {
+    background-color: #ffffff81;
+    padding: 0;
+    display: flex;
+    align-items: center;
+}
+
+#logo1, #logo2 {
+    display: flex;
+    align-items: center;
+    width: 50px; /* Set width for logo container */
+    padding: 10px 10px;
+}
+#logo1 img {
+    height: 90px; /* Adjust height for slimmer appearance */
+    padding: 10px 0px 0px 0px;
+}
+
+#logo2 img {
+    height: 200px; /* Adjust height for slimmer appearance */
+    padding: 0px 0px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ensure nav takes full width */
+    padding: auto;
+    max-height: 85px; /* Reduce max width of the nav bar */
+    
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 10px 50px 0px 0px;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-left: auto; /* Pushes nav items to the right */
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    background-color:#0b046a;
+    border-radius: 5px;
+}
+
+nav ul li a:hover {
+    background-color: #138fff;
+}
+
+/* Add any necessary styles for the slider */
+.slider {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+.slider img {
+    width: 200%;
+    height: auto;
+}
+
+.slider-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
